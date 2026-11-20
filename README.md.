@@ -1,0 +1,68 @@
+# Smart Civic Issue Detection and Prioritization System
+
+## Project Overview
+The Smart Civic Issue Detection and Prioritization System is a web-based application designed to help citizens report civic problems and help administrators manage and resolve them efficiently.
+
+## Objectives
+- Allow citizens to submit civic complaints.
+- Upload images of civic issues.
+- Store complaint details using SQLite.
+- Provide an admin dashboard.
+- Track complaint status.
+- Explore AI-based detection and prioritization of civic issues.
+
+## Technologies Used
+- Python
+- Flask
+- HTML
+- CSS
+- SQLite
+- Roboflow (AI image detection prototype)
+
+## Main Features
+1. Citizen Complaint Registration
+2. Image Upload
+3. Complaint ID Generation
+4. Admin Dashboard
+5. Complaint Status Management
+6. AI-Based Civic Issue Detection (prototype)
+
+## Types of Civic Issues
+- Road potholes
+- Damaged sidewalks
+- Garbage dumping
+- Graffiti
+
+## Project Structure
+
+Smart-Civic-Issue-Detection/
+- app.py
+- templates/
+  - index.html
+  - admin.html
+
+## Installation and Execution
+
+1. Install Python.
+2. Install Flask:
+
+pip install flask
+
+3. Run the application:
+
+python app.py
+
+4. Open your browser and visit:
+
+http://127.0.0.1:5000/
+
+## GitHub Repository
+
+https://github.com/shwetametagudda0-pixel/Smart-Civic-Issue-Detection
+
+## Future Enhancements
+- Integrate AI image detection with the Flask application.
+- Automatic issue classification.
+- Priority-based complaint management.
+- Real-time complaint tracking.
+-
