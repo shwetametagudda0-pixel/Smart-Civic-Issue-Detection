@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Issue Reporting System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h1 {
+            color: #123b68;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            background: #145da0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0b3d70;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% if success %}
+        <p style=""color: green;">{{ success }}
+        </p>
+        {% endif %}
+
+        <h1>Smart Civic Issue Reporting</h1>
+
+        <p>Report civic problems and help build a better community.</p>
+
+        <form action="/submit"method="POST"
+        enctype="multipart/form-data">
+            <label>Citizen Name</label>
+            <input type="text" name="citizen_name"
+            placeholder="Enter your name" 
+            required>
+
+            <label>Issue Category</label>
+            <select name="category" required>
+                <option value="">Select an issue</option>
+                <option value="Road Pothole">Road Pathole</option>
+                <option value="Garbage Overflow">Garbage Overflow</option>
+                <option value="Water Leakage">Water Leakage</option>
+                <option value="Damaged Streetlight">Damaged Streetlight</option>
+                <option value="Drainage Problem">Drainage Problem</option>
+            </select>
+
+            <label>Location</label>
+            <input type="text" name="location"
+            placeholder="Enter location" required>
+
+            <label>Issue Description</label>
+            <textarea name="description" rows="4"
+            placeholder="Describe the problem" 
+            required></textarea>
+
+            <label>Upload Issue Image</label>
+            <input type="file" name="image"
+            accept="image/*">
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+
+    </div>
+</body>
+</html>
